@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Soldier Registration Form</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+background:linear-gradient(135deg,#000000,#0f0c29,#302b63,#24243e,#005c97,#363795);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+}
+@keyframes bgMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+.container{
+width:1000px;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(12px);
+border-radius:25px;
+padding:35px;
+color:white;
+box-shadow:0 0 40px rgba(0,255,255,.3);
+}
+h1{text-align:center;margin-bottom:30px}
+fieldset{
+border:2px solid #00d4ff;
+border-radius:18px;
+padding:20px;
+margin-bottom:25px;
+}
+legend{
+padding:10px 15px;
+background:linear-gradient(90deg,#00d4ff,#8e2de2);
+border-radius:10px;
+font-weight:bold;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+margin-top:15px;
+}
+.input-box{display:flex;flex-direction:column}
+label{margin-bottom:8px}
+input,select,textarea{
+padding:12px;
+border-radius:10px;
+border:none;
+background:#1c1c1c;
+color:white;
+}
+input:focus,select:focus,textarea:focus{
+outline:2px solid cyan;
+}
+.buttons{text-align:center}
+button{
+padding:15px 35px;
+border:none;
+border-radius:30px;
+margin:10px;
+font-weight:bold;
+cursor:pointer;
+}
+.submit{background:linear-gradient(90deg,#00c853,#64dd17)}
+.reset{background:linear-gradient(90deg,#ff1744,#d50000);color:white}
+@media(max-width:768px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Soldier & Equipment Registration</h1>
+<form action="https://google.com">
+
+<fieldset>
+<legend>Basic Information</legend>
+
+<div class="grid">
+
+<div class="input-box">
+<label>Name</label>
+<input type="text" name="name" value="John Carter">
+</div>
+
+<div class="input-box">
+<label>Email</label>
+<input type="email" name="email" value="john.carter@army.gov">
+</div>
+
+<div class="input-box">
+<label>Password</label>
+<input type="password" name="password" value="Soldier@123">
+</div>
+
+<div class="input-box">
+<label>Phone</label>
+<input type="tel" name="phone" value="+44 7700 900123">
+</div>
+
+<div class="input-box">
+<label>Age</label>
+<input type="number" name="age" value="29" min="18" max="60">
+</div>
+
+<div class="input-box">
+<label>Birthday</label>
+<input type="date" name="birthday" value="1997-06-15">
+</div>
+
+<div class="input-box">
+<label>Deployment Time</label>
+<input type="time" name="deploy" value="08:30">
+</div>
+
+<div class="input-box">
+<label>Registration Week</label>
+<input type="week" name="week" value="2026-W20">
+</div>
+
+<div class="input-box">
+<label>Mission Month</label>
+<input type="month" name="month" value="2026-06">
+</div>
+
+<div class="input-box">
+<label>Website</label>
+<input type="url" name="website"
+value="https://military-portal.com">
+</div>
+
+<div class="input-box">
+<label>Search ID</label>
+<input type="search" name="search"
+value="SOL-2026-00891">
+</div>
+
+<div class="input-box">
+<label>Photo Upload</label>
+<input type="file" name="photo">
+</div>
+
+<div class="input-box">
+<label>Favorite Color</label>
+<input type="color" name="color" value="#00d4ff">
+</div>
+
+<div class="input-box">
+<label>Mission Progress</label>
+<input type="range"
+name="progress"
+min="0"
+max="100"
+value="75">
+</div>
+
+</div>
+</fieldset>
+
+
+<fieldset>
+<legend>Military Details</legend>
+
+<div class="grid">
+
+<div class="input-box">
+<label>Rank</label>
+<select name="rank">
+<option>Private</option>
+<option>Corporal</option>
+<option selected>Sergeant</option>
+<option>Captain</option>
+<option>Major</option>
+</select>
+</div>
+
+<div class="input-box">
+<label>Equipment Assigned</label>
+
+<input
+list="equipments"
+name="equipment"
+value="Rifle">
+
+<datalist id="equipments">
+<option>Rifle</option>
+<option>Helmet</option>
+<option>Armor</option>
+<option>Radio</option>
+</datalist>
+
+</div>
+</div>
+
+<br>
+
+<label>Gender</label><br>
+
+<input type="radio" name="g" checked> Male
+<input type="radio" name="g"> Female
+<input type="radio" name="g"> Other
+
+<br><br>
+
+<label>Equipment Checklist</label><br>
+
+<input type="checkbox" checked> Helmet
+<input type="checkbox" checked> Armor
+<input type="checkbox" checked> Rifle
+<input type="checkbox"> Medical Kit
+
+</fieldset>
+
+
+<fieldset>
+<legend>Additional Notes</legend>
+
+<textarea rows="5">
+Assigned to Operation Falcon Shield.
+Sector: Alpha-7
+Priority: High
+Status: Active
+</textarea>
+
+</fieldset>
+
+
+<div class="buttons">
+<button class="submit" type="submit">
+Register Soldier
+</button>
+
+<button class="reset" type="reset">
+Reset Form
+</button>
+</div>
+
+<input type="hidden" name="formType" value="MilitaryData">
+
+</form>

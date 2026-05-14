@@ -1,0 +1,113 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Attributes Demo</title>
+<style>
+  body{font-family:Arial,sans-serif;padding:20px}
+  .box{border:1px solid #ccc;padding:10px;margin:10px 0}
+</style>
+</head>
+<body>
+
+<h1 id="mainTitle"
+    class="box"
+    accesskey="h"
+    autocapitalize="words"
+    contenteditable="true"
+    data-category="heading"
+    dir="ltr"
+    draggable="true"
+    enterkeyhint="done"
+    lang="en"
+    role="heading"
+    spellcheck="true"
+    style="color:navy"
+    tabindex="1"
+    title="Main heading"
+    translate="yes">
+    HTML Global Attributes Example
+</h1>
+
+<p id="paragraph1"
+   class="box"
+   data-info="sample"
+   contenteditable="true"
+   draggable="true"
+   lang="en"
+   spellcheck="true"
+   tabindex="2"
+   title="Editable paragraph"
+   itemprop="description">
+   This paragraph demonstrates several global attributes.
+</p>
+
+<div id="card"
+     class="box"
+     itemscope
+     itemtype="https://schema.org/Person"
+     itemid="person1"
+     data-user="developer"
+     role="article"
+     tabindex="3"
+     title="Profile card">
+
+     <span itemprop="name">John Doe</span><br>
+     <span itemprop="jobTitle">Web Developer</span>
+</div>
+
+<input type="text"
+       class="box"
+       autofocus
+       inputmode="text"
+       enterkeyhint="next"
+       spellcheck="true"
+       title="Input field"
+       data-input="username">
+
+<button class="box"
+        id="btn1"
+        accesskey="b"
+        popovertarget="popup"
+        tabindex="4"
+        title="Open popup">
+        Open Popup
+</button>
+
+<div id="popup"
+     popover
+     class="box"
+     role="dialog">
+     Popup content example.
+</div>
+
+<section class="box"
+         hidden
+         title="Hidden section">
+         This section is hidden.
+</section>
+
+<div class="box"
+     inert>
+     This area is inactive because of the inert attribute.
+</div>
+
+<footer class="box"
+         part="footerPart"
+         slot="footerSlot"
+         nonce="abc123"
+         title="Footer section">
+         Footer Example
+</footer>
+
+</body>
+</html>
+```
+
+Notes:
+
+* Some global attributes are newer or browser-dependent (for example: `popover`, `inert`, `part`, `slot`).
+* Not every global attribute is meaningful on every element, so this file demonstrates them across multiple elements rather than forcing all of them onto one tag.
+* `is` is omitted because it is mainly used with customized built-in elements in Web Components.
